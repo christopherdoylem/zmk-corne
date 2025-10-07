@@ -13,23 +13,6 @@
 #define RAISE 2
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_Enter {
-            timeout-ms = <60>;
-            bindings = <&kp RET>;
-            key-positions = <19 20 21>;
-            layers = <>;
-        };
-        combo_Del {
-            timeout-ms = <60>;
-            bindings = <&kp BACKSPACE>;
-            key-positions = <31 32 33>;
-            layers = <>;
-        };
-    };
-
     behaviors {
         HML: HML {
             compatible = "zmk,behavior-hold-tap";
