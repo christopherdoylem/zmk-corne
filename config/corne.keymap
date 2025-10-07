@@ -23,10 +23,10 @@
             layers = <>;
         };
         combo_Del {
-        timeout-ms = <60>;
-        key-positions = <31 32 33>;
-        layers = <>;
-        bindings = <&kp BS>; 
+            timeout-ms = <60>;
+            bindings = <&kp BS>;
+            key-positions = <31 32 33>;
+            layers = <>;
         };
     };
 
