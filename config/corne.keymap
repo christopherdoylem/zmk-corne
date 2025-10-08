@@ -24,7 +24,7 @@
 		combo_ctrl-del {
 			timeout-ms = <50>;
 			key-positions = <31 32>;
-			bindings = <&kp LC(DEL)>;
+			bindings = <&kp LC(BSPC)>;
 		};
 	};
 	
@@ -85,9 +85,9 @@
                         display-name = "Raise";
                         bindings = <
                           &trans           					&kp EXCL         	  	&kp AT         			  &kp HASH        		  	&kp DOLLAR      	  	&kp PRCNT    	        	&kp CARET          		&kp AMPERSAND	        	&kp ASTERISK        	&kp LEFT_PARENTHESIS	    &kp RIGHT_PARENTHESIS	&trans
-                          &trans            				&trans          		&trans         			  &trans          			&trans          		&trans       			    &kp MINUS          		&kp EQUAL       		  &kp LEFT_BRACKET	     	&kp RIGHT_BRACKET       	&kp BACKSLASH           &kp GRAVE 
-                          &trans            				&trans          		&trans         			  &trans          			&trans          		&trans       			    &kp UNDERSCORE     	  	&kp PLUS        		  &kp LEFT_BRACE      	 	&kp RIGHT_BRACE         	&kp PIPE                &kp TILDE 
-                                                                           										&trans          			&trans          		&trans       			    &trans             		&trans          			&trans 
+                          &trans            				&trans          		&trans         			  &trans          			&trans          		&trans       			    &kp MINUS          		&kp EQUAL       		  	&kp LEFT_BRACKET	    &kp RIGHT_BRACKET       	&kp BACKSLASH           &kp GRAVE 
+                          &trans            				&trans          		&trans         			  &trans          			&trans          		&trans       			    &kp UNDERSCORE     	  	&kp PLUS        		  	&kp LEFT_BRACE      	&kp RIGHT_BRACE         	&kp PIPE                &kp TILDE 
+                                                                           									  &trans          			&trans          		&trans       			    &trans             		&trans          			&trans 
                         >;
                 };
 
