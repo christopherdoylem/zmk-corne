@@ -48,30 +48,30 @@
                 default_layer {
                         display-name = "Base";
                         bindings = <
-                          &kp TAB           &kp B           &kp L           &kp D           &HML LGUI W   &kp Z       &kp SINGLE_QUOTE    &HMR RGUI F   &kp O         &kp U         &kp J       &kp SEMICOLON 
-                          &kp LEFT_CONTROL  &lt RAISE N     &HML LALT R     &HML LCTRL T    &lt LOWER S   &kp G       &kp Y               &lt LOWER H   &HMR RCTRL A  &HMR LALT E   &lt RAISE I &kp COMMA 
-                          &kp LEFT_SHIFT    &kp Q           &kp X           &kp M           &kp C         &kp V       &kp K               &kp P         &kp DOT       &kp MINUS     &kp SLASH   &kp ESCAPE 
-                                                                        &mo LOWER   &kp BACKSPACE   &kp LEFT_SHIFT    &kp RETURN    &kp SPACE   &mo RAISE 
+                          &kp TAB           &kp B           &kp L           &kp D           &HML LGUI W   &kp Z        &kp SINGLE_QUOTE    &HMR RGUI F      &kp O            &kp U                   &kp J                   &kp SEMICOLON 
+                          &kp LEFT_CONTROL  &lt RAISE N     &HML LCTRL R    &HML LALT T     &lt LOWER S   &kp G        &kp Y               &lt LOWER H      &HMR LALT A      &HMR RCTRL E            &lt RAISE I             &kp COMMA 
+                          &kp LEFT_SHIFT    &kp Q           &kp X           &kp M           &kp C         &kp V        &kp K               &kp P            &kp DOT          &kp MINUS               &kp SLASH               &kp ESCAPE 
+                                                                            &mo LOWER       &kp BSPC     &kp LSHIFT    &kp RETURN          &kp SPACE        &mo RAISE 
                         >;
                 };
 
                 lower_layer {
                         display-name = "lower";
                         bindings = <
-                          &trans            &kp N1          &kp N2          &kp N3          &kp N4         &kp N5       &kp N6            &kp N7            &kp N8        &kp N9           &kp N0      &trans 
-                          &bootloader       &trans          &trans          &trans          &trans         &trans       &kp LEFT_ARROW    &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &trans      &bootloader 
-                          &trans            &trans          &trans          &trans          &trans         &trans       &trans            &kp LEFT          &kp DOWN      &kp RIGHT        &trans      &trans 
-                                                                                    &trans      &trans      &trans      &trans      &trans      &trans 
+                          &trans            &kp N1          &kp N2          &kp N3          &kp N4         &kp N5       &kp N6            &kp N7            &kp N8            &kp N9                  &kp N0                  &trans 
+                          &bootloader       &kp TAB         &kp DEL         &trans          &trans         &trans       &trans            &trans            &kp UP            &trans                  &trans                  &bootloader 
+                          &trans            &trans          &trans          &trans          &trans         &trans       &trans            &kp LEFT          &kp DOWN          &kp RIGHT               &trans                  &trans 
+                                                                            &trans          &trans         &trans       &trans            &trans            &trans 
                         >;
                 };
 
                 raise_layer {
                         display-name = "Raise";
                         bindings = <
-                          &trans    &kp EXCLAMATION     &kp AT_SIGN     &kp HASH    &kp DOLLAR      &kp PERCENT         &kp CARET      &kp AMPERSAND   &kp ASTERISK     &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS   &trans
-                          &trans    &trans              &trans          &trans      &trans          &trans              &kp MINUS      &kp EQUAL       &kp LEFT_BRACKET &kp RIGHT_BRACKET       &kp BACKSLASH           &kp GRAVE 
-                          &trans    &trans              &trans          &trans      &trans          &trans              &kp UNDERSCORE &kp PLUS        &kp LEFT_BRACE   &kp RIGHT_BRACE         &kp PIPE                &kp TILDE 
-                                                                        &trans      &trans          &trans              &trans         &trans          &trans 
+                          &trans           &kp EXCL         &kp AT         &kp HASH        &kp DOLLAR      &kp PRCNT    &kp CARET          &kp AMPERSAND   &kp ASTERISK        &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS   &trans
+                          &trans            &trans          &trans         &trans          &trans          &trans       &kp MINUS          &kp EQUAL       &kp LEFT_BRACKET    &kp RIGHT_BRACKET       &kp BACKSLASH           &kp GRAVE 
+                          &trans            &trans          &trans         &trans          &trans          &trans       &kp UNDERSCORE     &kp PLUS        &kp LEFT_BRACE      &kp RIGHT_BRACE         &kp PIPE                &kp TILDE 
+                                                                           &trans          &trans          &trans       &trans             &trans          &trans 
                         >;
                 };
 
