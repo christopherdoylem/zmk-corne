@@ -11,8 +11,18 @@
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
+#define FUNCTION 3
 
 / {
+	combos {
+		compatible = "zmk,combos";
+		combo_enter {
+			timeout-ms = <50>;
+			key-positions = <19 20 21>;
+			bindings = <&kp RETURN> 
+		};
+	};
+	
     behaviors {
         HML: HML {
             compatible = "zmk,behavior-hold-tap";
@@ -42,43 +52,52 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
     };
+    
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         display-name = "Base";
                         bindings = <
-                          &kp TAB           &kp B           &kp L           &kp D           &HML LGUI W   &kp Z        &kp SINGLE_QUOTE    &HMR RGUI F      &kp O            &kp U                   &kp J                   &kp SEMICOLON 
-                          &kp LEFT_CONTROL  &lt RAISE N     &HML LCTRL R    &HML LALT T     &lt LOWER S   &kp G        &kp Y               &lt LOWER H      &HMR LALT A      &HMR RCTRL E            &lt RAISE I             &kp COMMA 
-                          &kp LEFT_SHIFT    &kp Q           &kp X           &kp M           &kp C         &kp V        &kp K               &kp P            &kp DOT          &kp MINUS               &kp SLASH               &kp ESCAPE 
-                                                                            &mo LOWER       &kp BSPC     &kp LSHIFT    &kp RETURN          &kp SPACE        &mo RAISE 
+                          &kp TAB    				       &kp B              	&kp L           			&kp D						    &HML LGUI W   	      &kp Z        			  &kp SINGLE_QUOTE      &HMR RGUI F             &kp O            			&kp U                   	  &kp J				      &kp SEMICOLON 
+                          &kp LEFT_CONTROL         &lt RAISE N     	    &HML LCTRL R          &HML LALT T     	  &lt LOWER S   		    &kp G        			  &kp Y               	&lt LOWER H      	      &HMR LALT A      	    &HMR RCTRL E                &lt RAISE I       &kp COMMA 
+                          &mo FUNCTION             &kp Q           	    &kp X           			&kp M           	  &kp C         				&kp V        			  &kp K               	&kp P            			  &kp DOT          		  &kp MINUS                   &kp SLASH         &kp ESCAPE 
+                                                                            									&mo LOWER       	  &kp BSPC     			    &kp LSHIFT    	    &kp RETURN          	&kp SPACE        		    &mo RAISE 
                         >;
                 };
 
                 lower_layer {
-                        display-name = "lower";
+                        display-name = "Lower";
                         bindings = <
-                          &trans            &kp N1          &kp N2          &kp N3          &kp N4         &kp N5       &kp N6            &kp N7            &kp N8            &kp N9                  &kp N0                  &trans 
-                          &bootloader       &kp TAB         &kp DEL         &trans          &trans         &trans       &trans            &trans            &kp UP            &trans                  &trans                  &bootloader 
-                          &trans            &trans          &trans          &trans          &trans         &trans       &trans            &kp LEFT          &kp DOWN          &kp RIGHT               &trans                  &trans 
-                                                                            &trans          &trans         &trans       &trans            &trans            &trans 
+                          &trans            				&kp N1          		&kp N2          			&kp N3          			&kp N4         			&kp N5       			    &kp N6            	&kp N7            		  &kp N8            		&kp N9                  		&kp N0			       &trans 
+                          &bootloader       				&kp TAB         	  &kp DEL         		  &trans          			&trans         			&trans       			    &trans            	&trans            			&kp UP            		&trans                  		&trans             &bootloader 
+                          &trans            				&trans          		&trans          			&trans          			&trans         			&trans       			    &trans            	&kp LEFT          		  &kp DOWN          	  &kp RIGHT               	  &trans             &trans 
+                                                                            									&trans          			&trans         			&trans       			    &trans            	&trans            			&trans 
                         >;
                 };
 
                 raise_layer {
                         display-name = "Raise";
                         bindings = <
-                          &trans           &kp EXCL         &kp AT         &kp HASH        &kp DOLLAR      &kp PRCNT    &kp CARET          &kp AMPERSAND   &kp ASTERISK        &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS   &trans
-                          &trans            &trans          &trans         &trans          &trans          &trans       &kp MINUS          &kp EQUAL       &kp LEFT_BRACKET    &kp RIGHT_BRACKET       &kp BACKSLASH           &kp GRAVE 
-                          &trans            &trans          &trans         &trans          &trans          &trans       &kp UNDERSCORE     &kp PLUS        &kp LEFT_BRACE      &kp RIGHT_BRACE         &kp PIPE                &kp TILDE 
-                                                                           &trans          &trans          &trans       &trans             &trans          &trans 
+                          &trans           					&kp EXCL         	  &kp AT         			  &kp HASH        		  &kp DOLLAR      	  &kp PRCNT    	        &kp CARET          		&kp AMPERSAND	        &kp ASTERISK        	&kp LEFT_PARENTHESIS	      &kp RIGHT_PARENTHESIS		&trans
+                          &trans            				&trans          		&trans         			  &trans          			&trans          		&trans       			    &kp MINUS          		&kp EQUAL       		  &kp LEFT_BRACKET	     &kp RIGHT_BRACKET       	  &kp BACKSLASH           &kp GRAVE 
+                          &trans            				&trans          		&trans         			  &trans          			&trans          		&trans       			    &kp UNDERSCORE     	  &kp PLUS        		  &kp LEFT_BRACE      	 &kp RIGHT_BRACE         		&kp PIPE                &kp TILDE 
+                                                                           										&trans          			&trans          		&trans       			    &trans             		&trans          			&trans 
                         >;
+                };
+
+                function_layer {
+                        display-name = "Function";
+                        bindings = <
+                          &trans           					&kp F1        	    &kp F2         			  &kp F3        		    &kp F4          	  &kp F5    	          &kp F6          		  &kp F7	              &kp F8        	       &kp F9	                    &kp F10		              &trans
+                          &trans            				&kp F11          		&trans         			  &trans          			&trans          		&trans       			    &kp C_VOL_UP          &trans	              &trans       	         &trans                     &kp F12                 &trans
+                          &trans            				&trans          		&trans         			  &trans          			&trans          		&kp C_MUTE      			&kp C_VOL_DN    	    &trans        		    &trans      	         &trans         		        &trans                  &trans 
+                                                                                            &trans          			&trans          		&trans       			    &trans             		&trans          			&trans 
+                         >;
                 };
 
                   extra_1 { status = "reserved"; };
 
                   extra_2 { status = "reserved"; };
-
-                  extra_3 { status = "reserved"; };
       };
 };
