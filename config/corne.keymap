@@ -60,9 +60,9 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
 
-        PQ: PQ {
+        th: taphold {
             compatible = "zmk,behavior-hold-tap";
-			label = "P on tap, ? on hold";
+			label = "TAP HOLD";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -83,7 +83,7 @@
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                             &kp LCTRL     &lt RAISE N  &HML LCTRL R   &HML LALT T   &lt LOWER S   &kp G            &kp Y        &lt LOWER H    &HMR LALT A   &HMR LCTRL E  &lt RAISE I   &kp COMMA  
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-                            &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C         &kp V            &kp K        &PQ P LS(PSLASH) &kp DOT      &kp MINUS     &kp SLASH     &kp ESCAPE 
+                            &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C         &kp V            &kp K       &th LS(SLASH) P  &kp DOT      &kp MINUS     &kp SLASH     &kp ESCAPE 
                         //╰─────────────┬─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
                                                                       &mo LOWER     &kp BSPC      &kp LSHFT       &kp RETURN    &kp SPACE      &mo RAISE
                         //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
