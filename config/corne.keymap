@@ -23,7 +23,7 @@
 			key-positions = <19 20 21>;
 			bindings = <&kp RETURN>;
 		};
-		combo_ctrl-del {
+		combo_ctrl-backspace {
 			timeout-ms = <50>;
 			key-positions = <31 32>;
 			bindings = <&kp LC(BSPC)>;
@@ -71,7 +71,7 @@
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                             &kp LCTRL     &lt RAISE N   &HML LCTRL R  &HML LALT T   &lt LOWER S   &kp G       ,   &kp Y         &lt LOWER H    &HMR LALT A   &HMR LCTRL E  &lt RAISE I   &kp COMMA  ,
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-                            &lt FUNCTION  &kp Q         &kp X         &kp M         &kp C         &kp V       ,   &kp K         &kp P  	   	   &kp DOT       &kp MINUS     &kp SLASH     &kp ESCAPE ,
+                            &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C         &kp V       ,   &kp K         &kp P  	   	   &kp DOT       &kp MINUS     &kp SLASH     &kp ESCAPE ,
                         //╰─────────────┬─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
                                                                       &mo LOWER     &kp BSPC      &kp LSHFT   ,   &kp RETURN    &kp SPACE      &mo RAISE
                         //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
