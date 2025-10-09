@@ -12,7 +12,6 @@
 #define LOWER 1
 #define RAISE 2
 #define FUNCTION 3
-
 #define ___ &trans
 
 / {
@@ -67,11 +66,11 @@
                         display-name = "Base";
                         bindings = <
                         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                            &kp TAB       &kp B         &kp L         &kp D         &HML LGUI W   &kp Z       ,   &kp SQT       &HMR RGUI F    &kp O         &kp U         &kp J         &kp SEMI   ,
+                            &kp TAB       &kp B         &kp L         &kp D         &HML LGUI W   &kp Z       ,   &kp SQT       &HMR RGUI F    &kp O         &kp U         &kp J        &kp SEMI    ,
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                             &kp LCTRL     &lt RAISE N   &HML LCTRL R  &HML LALT T   &lt LOWER S   &kp G       ,   &kp Y         &lt LOWER H    &HMR LALT A   &HMR LCTRL E  &lt RAISE I   &kp COMMA  ,
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-                            &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C         &kp V       ,   &kp K         &kp P  	   	   &kp DOT       &kp MINUS     &kp SLASH     &kp ESCAPE ,
+                            &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C         &kp V       ,   &kp K         &kp P          &kp DOT      &kp MINUS     &kp SLASH     &kp ESCAPE  ,
                         //╰─────────────┬─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
                                                                       &mo LOWER     &kp BSPC      &kp LSHFT   ,   &kp RETURN    &kp SPACE      &mo RAISE
                         //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
