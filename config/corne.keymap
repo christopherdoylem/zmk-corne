@@ -14,7 +14,6 @@
 #define FUNCTION 3
 
 #define ___ &trans
-#define qumark &kp LSHFT(SLASH)
 
 / {
 	combos {
@@ -58,17 +57,6 @@
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-        };
-
-        mt: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "mod-tap";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            flavor = "hold-preferred";
         };
     };
     
