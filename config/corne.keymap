@@ -95,8 +95,7 @@
 		num_word: num_word {
 			compatible = "zmk,behavior-auto-layer";
       		#binding-cells = <1>;
-	        layers = <LOWER>; // Replace NUM by index of numbers layer
-	        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+	        continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
 	        ignore-numbers;
 		};
     };
