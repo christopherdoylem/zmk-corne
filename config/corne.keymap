@@ -94,7 +94,7 @@
 
 		num_word: num_word {
 			compatible = "zmk,behavior-auto-layer";
-      		#binding-cells = <0>;
+      		#binding-cells = <1>;
 	        layers = <LOWER>; // Replace NUM by index of numbers layer
 	        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 	        ignore-numbers;
@@ -114,7 +114,7 @@
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                             &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C         &kp V           &kp K        &th LS(SLASH) P &kp DOT       &kp MINUS     &kp SLASH     &kp ESCAPE 
                         //╰─────────────┬─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
-                                                                      &num_word     &kp BSPC      &kp LSHFT       &kp RETURN   &th RGUI SPACE &mo RAISE
+                                                                      &num_word LOWER  &kp BSPC    &kp LSHFT      &kp RETURN   &th RGUI SPACE &mo RAISE
                         //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };  
