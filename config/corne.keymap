@@ -100,7 +100,19 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
  			require-prior-idle-ms = <150>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
+        };
+
+        tb: taphold {
+            compatible = "zmk,behavior-hold-tap";
+			label = "TAP HOLD FOR THUMB";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+ 			// require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
         };
 
 		num_word: num_word {
@@ -124,7 +136,7 @@
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                             &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C         &kp V           &kp K        &th LS(SLASH) P &kp DOT       &kp MINUS     &kp SLASH     &kp ESCAPE 
                         //╰─────────────┬─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
-                                                                      &num_word LOWER  &kp BSPC    &kp LSHFT      &kp RETURN   &th RGUI SPACE &mo RAISE
+                                                                      &num_word LOWER  &kp BSPC    &kp LSHFT      &kp RETURN   &tb RGUI SPACE &mo RAISE
                         //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };  
