@@ -50,8 +50,18 @@
 				key-positions = <32 33>;
 				bindings = <&kp RBKT>;
 			};
+	        combo_left-squiggle {
+				timeout-ms = <50>;
+				key-positions = <19 20>;
+				bindings = <&kp LBRC>;
+			};
+	        combo_right-squiggle {
+				timeout-ms = <50>;
+				key-positions = <20 21>;
+				bindings = <&kp RBRC>;
+			};
 	};
-	
+
     behaviors {
         HML: HML {
             compatible = "zmk,behavior-hold-tap";
@@ -87,8 +97,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <175>;
+ 			require-prior-idle-ms = <150>;
             flavor = "hold-preferred";
         };
 
