@@ -17,7 +17,7 @@
 #define NAV 4
 #define ___ &trans
 #define slashP &th LS(SLASH) P
-#define alttab &kp LALT(TAB)
+#define alttab &kp LA(TAB)
 
 / {
         combos {
