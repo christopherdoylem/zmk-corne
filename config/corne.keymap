@@ -17,6 +17,7 @@
 #define NAV 4
 #define ___ &trans
 #define slashP &th LS(SLASH) P
+#define HYPEReturn &tb LS(LC(LA(LGUI))) RETURN 
 
 / {
         combos {
@@ -137,7 +138,7 @@
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                             &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C          &kp V           &kp K        slashP         &kp DOT       &kp MINUS     &kp SLASH     &kp ESCAPE 
                         //╰─────────────┬─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
-                                                                      &num_word 1   &kp BSPC       &kp LSHFT       &kp RETURN   &tb RGUI SPACE  &mo 2
+                                                                      &num_word 1   &kp BSPC       &kp LSHFT       HYPEReturn  &tb RGUI SPACE  &mo 2
                         //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };  
