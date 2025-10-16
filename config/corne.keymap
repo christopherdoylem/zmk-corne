@@ -18,7 +18,7 @@
 #define ___ &trans
 #define slashP &th LS(SLASH) P
 #define HYPEReturn &tb LS(LC(LA(LGUI))) RETURN
-#define Meh &kp LS(LC(LA()))
+#define Meh &tb LS(LC(LA))
 
 / {
         combos {
