@@ -18,7 +18,7 @@
 #define ___ &trans
 #define slashP &th LS(SLASH) P
 #define HYPEReturn &tb LS(LC(LA(LGUI))) RETURN
-#define Meh LS(LC(LA))
+#define MehSpace &tb LS(LC(LA)) SPACE
 
 / {
         combos {
@@ -139,7 +139,7 @@
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                             &mo FUNCTION  &kp Q         &kp X         &kp M         &kp C          &kp V           &kp K        slashP         &kp DOT       &kp MINUS     &kp SLASH     &kp ESCAPE 
                         //╰─────────────┬─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
-                                                                      &num_word 1   &tb LGUI BSPC  &kp LSHFT       HYPEReturn   &tb Meh SPACE  &mo 2
+                                                                      &num_word 1   &tb LGUI BSPC  &kp LSHFT       HYPEReturn   MehSPACE       &mo 2
                         //                                          ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
                         >;
                 };  
