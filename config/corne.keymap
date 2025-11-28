@@ -19,7 +19,7 @@
 #define slashP &th LS(SLASH) P
 #define HYPEReturn &tb LS(LC(LA(LGUI))) RETURN
 #define MehSpace &tb LS(LC(LALT)) SPACE
-#define tbL &th LALT(TAB) L
+#define tbL &th LA(TAB) L
 
 / {
         combos {
