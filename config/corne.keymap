@@ -19,6 +19,7 @@
 #define slashP &th LS(SLASH) P
 #define HYPEReturn &tb LS(LC(LA(LGUI))) RETURN
 #define MehSpace &tb LS(LC(LALT)) SPACE
+#define alttabL &th LALT(TAB) L
 
 / {
         combos {
@@ -112,7 +113,7 @@
                 bindings = <&kp>, <&kp>;
 
                 #binding-cells = <2>;
-                 tapping-term-ms = <280>;
+                tapping-term-ms = <280>;
                 quick-tap-ms = <175>;
                 // require-prior-idle-ms = <150>;
                 flavor = "tap-preferred";
@@ -124,25 +125,11 @@
                 continue-list = <N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 BSPC DEL DOT COMMA SPACE SEMI>;
                 ignore-numbers;
         };
-        
+
         f_word: num_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
             continue-list = <F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 MINUS EQUAL UNDER PLUS>;
-        };
-
-        tab: tabhold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAB HOLD";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            flavor = "hold-preferred";
-            hold-trigger-key-positions = <7 20 21>;
-            hold-trigger-on-release;
         };
 
     };
@@ -154,7 +141,7 @@
                         display-name = "Base";
                         bindings = <
                         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                            &kp TAB       &kp B         &HML TAB L    &kp D         &HML LGUI W    &kp Z           &th DQT SQT  &HMR LGUI F    &kp O         &kp U         &kp J         &kp SEMI   
+                            &kp TAB       &kp B         alttabL       &kp D         &HML LGUI W    &kp Z           &th DQT SQT  &HMR LGUI F    &kp O         &kp U         &kp J         &kp SEMI   
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                                 ___       &lt 2 N       &HML LCTRL R  &HML LALT T   &lt 4 S        &kp G           &kp Y        &lt 4 H        &HMR LALT A   &HMR LCTRL E  &lt 2 I       &kp COMMA  
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
@@ -219,7 +206,7 @@
                         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                                 ___          ___          &kp TAB      &kp DELETE      ___           ___             ___         &kp LC(C)     &kp UP       &kp LC(V)         ___           ___        
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
-                                ___       &kp ESCAPE       ___           ___           ___           ___             ___         &kp LEFT      &kp DOWN     &kp RIGHT         ___           ___ 
+                                ___       &kp ESCAPE      &kp TAB        ___           ___           ___             ___         &kp LEFT      &kp DOWN     &kp RIGHT         ___           ___ 
                         //├─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────┤
                                 ___          ___           ___           ___           ___           ___             ___           ___           ___           ___            ___           ___       
                         //╰─────────────┬─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────┴─────────────╯
@@ -230,4 +217,4 @@
 
                   extra_2 { status = "reserved"; };
       };
-};
+};r
